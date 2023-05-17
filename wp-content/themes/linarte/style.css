@@ -1,0 +1,177 @@
+header{
+    position: fixed;
+    top: 0;
+    background-color: #d58749e0;
+    z-index: 10;
+    box-shadow: 0 0 4px #212529;
+    -moz-box-shadow: 0 0 4px #212529;
+    -webkit-box-shadow: 0 0 4px #212529;
+}
+header .logo{
+    border-radius: 50% 50% 0px 0px;
+}
+header a,
+.link-productos,
+.link{
+    color: black;
+}
+#menu{
+    font-size: x-large;
+    font-weight: bold;
+}
+#menu li{
+    padding: 8px;
+}
+#menu a{    
+    position: relative;
+    color: black;
+    padding: 2px 8px;
+}
+#menu a:hover,
+#menu a.active,
+#contactos a:hover,
+.link-productos:hover,
+.link:hover{    
+    color: #484848;
+}
+#menu a:after{    
+  bottom: 0;
+  content: "";
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #484848;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+#menu a:hover:after,
+#menu a.active:after{
+  width: 100%;
+  left: 0;
+}
+#contactos a{
+    text-decoration: none;
+    display: block;    
+}
+#inicio,
+#espacios .imagen{
+    height: 100vh;
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#inicio .contenido{
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    left: 500px;
+}
+#inicio .descripcion,
+.link-productos{
+    background-color: #ffffff99;
+}
+.reservar-inicio,
+.titulo{
+    font-weight: 900;
+    color: #1f3f5c;
+}
+.reservar-inicio:hover{
+    color: #376fa1;
+}
+.animacion{    
+	-webkit-animation-duration: 1.5s;
+	animation-duration: 1.5s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-delay: 0.2s;
+	-moz-animation-delay: 0.2s;
+	animation-delay: 0.2s;    
+    -webkit-animation-play-state: paused;   
+    -moz-animation-play-state: paused;     
+    -ms-animation-play-state: paused;
+    -o-animation-play-state: paused;   
+    animation-play-state: paused; 
+}
+.delay{    
+	-webkit-animation-delay: 0.3s;
+	-moz-animation-delay: 0.3s;
+	animation-delay: 0.3s;
+}
+.running{    
+  -webkit-animation-play-state: running;
+  -moz-animation-play-state: running;
+  -ms-animation-play-state: running;
+  -o-animation-play-state: running;
+  animation-play-state: running;
+}
+.fadeIn {
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+.bounceInRight{    
+	-webkit-animation-name: bounceInRight;
+	animation-name: bounceInRight;
+}
+@-webkit-keyframes fadeIn {
+	from {
+	  opacity: 0;
+	  -webkit-transform: translate3d(0, -100%, 0);
+	  transform: translate3d(0, -100%, 0);
+	}
+  
+	to {
+	  opacity: 1;
+	  -webkit-transform: none;
+	  transform: none;
+	}
+}
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	60% {
+		opacity: 0;
+	}
+	20% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+} 
+@keyframes bounceInRight {
+	0% {
+		opacity: 0;
+		transform: translateX(100px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+#ubicacion, 
+#espacios .contenido,
+#habitaciones{
+    padding: 100px 0px;
+}
+.cuadro{
+    background-color: #1f3f5c;
+}
+#espacios .imagen{
+    filter: opacity(60%);
+    height: 100%;
+    z-index: -1;
+}
+#habitaciones .wonderplugin3dcarousel-item-container{
+    background-color: #1f3f5c;
+    padding: 10px;
+}
+#habitaciones .wonderplugin3dcarousel-image{
+    width: 100% !important;
+}
+.wonderplugin3dcarousel-item > a div{
+    z-index: -1;
+}

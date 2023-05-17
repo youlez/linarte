@@ -101,7 +101,16 @@ function register_my_general_settings_fields()
     add_settings_field('correo_info', '<label for="correo_info">' . __('Correo de Información', 'correo_info') . '</label>', 'general_settings_correo_info_html', 'general');
 
     register_setting('general', 'telefono_info', 'esc_attr');
-    add_settings_field('telefono_info', '<label for="telefono_info">' . __('Telefono de Información', 'telefono_info') . '</label>', 'general_settings_telefono_info_html', 'general');
+    add_settings_field('telefono_info', '<label for="telefono_info">' . __('Telefono', 'telefono_info') . '</label>', 'general_settings_telefono_info_html', 'general');
+
+    register_setting('general', 'direccion_info', 'esc_attr');
+    add_settings_field('direccion_info', '<label for="direccion_info">' . __('Direccion', 'direccion_info') . '</label>', 'general_settings_direccion_info_html', 'general');
+
+    register_setting('general', 'municipio_info', 'esc_attr');
+    add_settings_field('municipio_info', '<label for="municipio_info">' . __('Municipio', 'municipio_info') . '</label>', 'general_settings_municipio_info_html', 'general');
+
+    register_setting('general', 'info_whatsapp', 'esc_attr');
+    add_settings_field('info_whatsapp', '<label for="info_whatsapp">' . __('Texto WhatsApp', 'info_whatsapp') . '</label>', 'general_settings_info_whatsapp_html', 'general');
 }
 
 function general_settings_correo_info_html()
@@ -114,4 +123,22 @@ function general_settings_telefono_info_html()
 {
     $value = get_option('telefono_info', '');
     echo '<input type="text" id="telefono_info" name="telefono_info" value="' . $value . '" class="regular-text ltr" />';
+}
+
+function general_settings_direccion_info_html()
+{
+    $value = get_option('direccion_info', '');
+    echo '<input type="text" id="direccion_info" name="direccion_info" value="' . $value . '" class="regular-text ltr" />';
+}
+
+function general_settings_municipio_info_html()
+{
+    $value = get_option('municipio_info', '');
+    echo '<input type="text" id="municipio_info" name="municipio_info" value="' . $value . '" class="regular-text ltr" />';
+}
+
+function general_settings_info_whatsapp_html()
+{
+    $value = get_option('info_whatsapp', '');
+    echo '<textarea id="info_whatsapp" name="info_whatsapp" cols="100" rows="5">' . $value . '</textarea>';
 }

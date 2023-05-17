@@ -9,11 +9,20 @@ jQuery(document).ready(function($){
         });
     }
     $(window).on('scroll', doAnimations);
-    cuadros();
+    $(document).on( "click", "#menu a", function(e) {
+        e.preventDefault();
+        link = $(this).attr('href');
+            mover = $(link).offset().top;
+            $( window ).scrollTo( mover  , {
+                duration: 1000
+            });
+            return false;
+    });
+    //cuadros();
 });
 
 jQuery(window).on("resize", function(){ 
-    cuadros();
+    //cuadros();
 });
 
 function cuadros(){
