@@ -10,13 +10,54 @@ jQuery(document).ready(function($){
     }
     $(window).on('scroll', doAnimations);
     $(document).on( "click", "#menu a", function(e) {
-        e.preventDefault();
-        link = $(this).attr('href');
-            mover = $(link).offset().top;
-            $( window ).scrollTo( mover  , {
-                duration: 1000
-            });
-            return false;
+         home = $('#home').val();
+        if(home==1){
+            link = $(this).attr('href');
+            if(link!="http://localhost/linarte/productos"){
+                e.preventDefault();
+                mover = $(link).offset().top;
+                $( window ).scrollTo( mover  , {
+                    duration: 1000
+                });
+                return false;
+            }
+        }        
+        // type = $('#type').val();
+        // if (type=="post"){
+        //     nam = $(this).attr('name');             
+        //     if(nam == "habitaciones"){                
+        //         e.preventDefault();
+        //         const myModal = new bootstrap.Modal('#habitaciones');
+        //         myModal.show();
+        //     }
+        // }
+    });
+    $(".wp3dcarousellightbox-1").click(function(e) {        
+        var principal = $(this).closest('li').css("z-index");
+        if(principal==6){
+            var nam = $(this).closest('li').find('.wonderplugin3dcarousel-hoveroverlay-title').text();
+            switch (nam) {
+                case "ZONA SOCIAL COLOMBIA":                    
+                    myModal = new bootstrap.Modal('#zona-social-colombia');
+                break;
+                case "HABITACIÓN ITALIA":                    
+                    myModal = new bootstrap.Modal('#habitacion-italia');
+                break;
+                case "HABITACIÓN ESPAÑA":                    
+                    myModal = new bootstrap.Modal('#habitacion-espana');
+                break;
+                case "HABITACIÓN MÉXICO":                    
+                    myModal = new bootstrap.Modal('#habitacion-mexico');
+                break;
+                case "HABITACIÓN USA":                    
+                    myModal = new bootstrap.Modal('#habitacion-usa');
+                break;
+                case "ESPACIOS ADICIONALES":                    
+                    myModal = new bootstrap.Modal('#espacios-adicionales');
+                break;
+            }
+            myModal.show();
+        }
     });
     //cuadros();
 });

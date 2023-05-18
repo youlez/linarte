@@ -17,11 +17,13 @@ if ($query) {
             </div>
             <a class="reservar-inicio text-decoration-none fs-2" target="_blank" href="https://wa.me/+57<?php echo get_option('telefono_info'); ?>">RESERVA AHORA</a>
         </div>
-        <a href="productos" class="col-2 position-absolute bottom-0 text-decoration-none link-productos p-2">
-            <div class="row align-items-center m-2">
-                <img class="col-4 p-0 pe-2" src="<?php bloginfo('template_url'); ?>/img/productos.png" alt="">
-                <div class="col-8 p-0 fs-5 fw-bold">
-                    Productos Linarte
+        <a href="#" class="position-absolute bottom-0 text-decoration-none link-video p-2" data-bs-toggle="modal" data-bs-target="#video">
+            <div class="row m-2">
+                <div class="col-12 d-flex justify-content-center fs-2">
+                    <i class="bi bi-file-play-fill"></i>
+                </div>
+                <div class="col-12 p-0 fs-5 fw-bold text-center">
+                    Ver Video
                 </div>
             </div>
         </a>
@@ -110,6 +112,96 @@ if ($query) {
         ?>
     </div>
 </section>
+<?php
+$args = array(
+    'post_type' => array('post'),
+    'post_status' => 'publish',
+    'orderby'  => 'date',
+    'order' => 'DESC'
+);
+$query = new WP_Query($args);
+if ($query->have_posts()) {
+    while ($query->have_posts()) {
+        $query->the_post();
+        $post_thumbnail_id = get_post_thumbnail_id();
+        $post_thumbnail_url = wp_get_attachment_url($post_thumbnail_id);
+?>
+
+        <div class="modal-habitaciones modal animacion fadeIn fast" id="<?php echo get_post_field('post_name', get_post()); ?>" tabindex="-1" aria-labelledby="<?php echo get_post_field('post_name', get_post()); ?>Label" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="titulo text-black" id="<?php echo get_post_field('post_name', get_post()); ?>Label"><?php echo get_the_title(); ?></h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <div id="carousel<?php echo get_post_field('post_name', get_post()); ?>" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#carousel<?php echo get_post_field('post_name', get_post()); ?>" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#carousel<?php echo get_post_field('post_name', get_post()); ?>" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    </div>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="<?php echo $post_thumbnail_url; ?>" class="img-fluid" alt="...">
+                                        </div>
+                                        <div class="carousel-item imagen-segunda">
+                                            <?php echo do_shortcode("[kdmfi_featured_image id='featured-image-2' size='full']"); ?>
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel<?php echo get_post_field('post_name', get_post()); ?>" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Anterior</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carousel<?php echo get_post_field('post_name', get_post()); ?>" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Siguiente</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="descripcion col-6 position-relative">
+                                <p><?php echo get_the_excerpt(); ?></p>
+                                <a href="<?php bloginfo('url'); ?>/<?php echo get_post_field('post_name', get_post()); ?>" class="btn-vermas px-3 py-2 text-white fw-bold text-decoration-none position-absolute bottom-0">VER MAS</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                        <a class="reservar-inicio text-decoration-none fs-3" target="_blank" href="https://wa.me/+57<?php echo get_option('telefono_info'); ?>">RESERVA AHORA</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+<?php
+    }
+}
+?>
+<div class="modal-espacios-adicionales modal animacion fadeIn fast" id="espacios-adicionales" tabindex="-1" aria-labelledby="espacios-adicionalesLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="titulo text-black" id="espacios-adicionalesLabel">ESPACIOS ADICIONALES</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body galeria">
+                <?php
+                echo do_shortcode('[responsive-slider id=88]');
+                ?>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-video modal animacion fadeIn fast" id="video" tabindex="-1" aria-labelledby="videoLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <video controls="" autoplay="" name="media" height="500px" style="border-radius: 5px">
+                <source src="<?php bloginfo('template_url'); ?>/video/video.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+</div>
 </body>
 <?php
 get_footer();

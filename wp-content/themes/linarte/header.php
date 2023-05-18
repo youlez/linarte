@@ -18,16 +18,19 @@
             <div class="col-8 d-flex justify-content-center align-items-center">
                 <ul class="nav" id="menu">
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo is_home() ? "#inicio" : get_bloginfo('url'); ?>">Inicio</a>
+                        <a class="nav-link" name="inicio" href="<?php echo is_home() ? "#inicio" : get_bloginfo('url'); ?>">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo is_home() ? "#ubicacion" : get_bloginfo('url') . "/#ubicacion"; ?>">Ubicación</a>
+                        <a class="nav-link" name="ubicacion" href="<?php echo is_home() ? "#ubicacion" : get_bloginfo('url') . "/#ubicacion"; ?>">Ubicación</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo is_home() ? "#espacios" : get_bloginfo('url') . "/#espacios"; ?>">Espacios</a>
+                        <a class="nav-link" name="espacios" href="<?php echo is_home() ? "#espacios" : get_bloginfo('url') . "/#espacios"; ?>">Espacios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo is_home() ? "#habitaciones" : get_bloginfo('url') . "/#habitaciones"; ?>">Habitaciones</a>
+                        <a class="nav-link" name="habitaciones" href="<?php echo is_home() ? "#habitaciones" : get_bloginfo('url') . "/#habitaciones"; ?>">Habitaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" name="productos" href="<?php echo get_bloginfo('url'); ?>/productos">Productos</a>
                     </li>
                 </ul>
             </div>
@@ -39,3 +42,5 @@
             </div>
         </div>
     </header>
+    <input type="hidden" id="home" value="<?php echo is_home() ? "1" : "0"; ?>">
+    <input type="hidden" id="type" value="<?php echo get_post_type(); ?>">

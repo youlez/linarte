@@ -11,7 +11,6 @@ header .logo{
     border-radius: 50% 50% 0px 0px;
 }
 header a,
-.link-productos,
 .link{
     color: black;
 }
@@ -30,7 +29,6 @@ header a,
 #menu a:hover,
 #menu a.active,
 #contactos a:hover,
-.link-productos:hover,
 .link:hover{    
     color: #484848;
 }
@@ -68,9 +66,18 @@ header a,
     right: 50px;
     left: 500px;
 }
-#inicio .descripcion,
-.link-productos{
+#inicio .descripcion{
     background-color: #ffffff99;
+    border-radius: 5px;
+}
+.link-video{
+    width: 10%;
+    background-color: #1f3f5c;
+    color: white;
+    border-radius: 0px 5px 5px 0px;
+}
+.link-video:hover{
+    color: #ffffff99;
 }
 .reservar-inicio,
 .titulo{
@@ -81,8 +88,8 @@ header a,
     color: #376fa1;
 }
 .animacion{    
-	-webkit-animation-duration: 1.5s;
-	animation-duration: 1.5s;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
 	-webkit-animation-fill-mode: both;
 	animation-fill-mode: both;
 	-webkit-animation-delay: 0.2s;
@@ -105,6 +112,10 @@ header a,
   -ms-animation-play-state: running;
   -o-animation-play-state: running;
   animation-play-state: running;
+}
+.fast{
+    -webkit-animation-duration: 0.1s; 
+    animation-duration: 0.1s;
 }
 .fadeIn {
 	-webkit-animation-name: fadeIn;
@@ -154,10 +165,13 @@ header a,
 }
 #ubicacion, 
 #espacios .contenido,
-#habitaciones{
+#habitaciones,
+.entradas,
+.productos{
     padding: 100px 0px;
 }
-.cuadro{
+.cuadro, .btn-vermas,
+.responsive-image-silder{
     background-color: #1f3f5c;
 }
 #espacios .imagen{
@@ -165,7 +179,8 @@ header a,
     height: 100%;
     z-index: -1;
 }
-#habitaciones .wonderplugin3dcarousel-item-container{
+#habitaciones .wonderplugin3dcarousel-item-container,
+.modal-habitaciones .carousel{
     background-color: #1f3f5c;
     padding: 10px;
 }
@@ -174,4 +189,40 @@ header a,
 }
 .wonderplugin3dcarousel-item > a div{
     z-index: -1;
+}
+#threedcarousel-html5-lightbox{
+    display: none !important;
+}
+.modal-habitaciones .imagen-segunda img {
+    max-width: 100%;
+    height: auto;
+}
+.btn-vermas:hover{
+    background-color: #376fa1;;
+}
+.responsive-image-silder{
+    padding-top: 30px;
+}
+.galeria .fotorama__stage {
+	height: 470px !important;
+}
+.fotorama__img {
+	width: auto !important;
+	height: 100% !important;
+	left: 0 !important;
+	right: 0 !important;
+	top: 0 !important;
+	bottom: 0 !important;
+	margin: auto !important;
+}
+.fotorama__wrap--css3.fotorama__wrap--no-controls.fotorama__wrap--slide.fotorama__wrap--toggle-arrows .fotorama__fullscreen-icon:not(:focus) {
+	-webkit-transform: translate3d(32px, 32px, 0) !important;
+	transform: translate3d(32px, 32px, 0px) !important;
+}
+.fotorama__fullscreen-icon {
+	top: auto !important;
+	bottom: 0 !important;
+}
+.comprar{
+    width: fit-content !important;
 }
