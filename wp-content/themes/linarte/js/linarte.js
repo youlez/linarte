@@ -13,7 +13,7 @@ jQuery(document).ready(function($){
          home = $('#home').val();
         if(home==1){
             link = $(this).attr('href');
-            if(link!="http://localhost/linarte/productos"){
+            if(link!="https://linarte.com.co/productos"){
                 e.preventDefault();
                 mover = $(link).offset().top;
                 $( window ).scrollTo( mover  , {
