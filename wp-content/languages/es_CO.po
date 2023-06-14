@@ -9912,7 +9912,7 @@ msgctxt "post type general name"
 msgid "Changesets"
 msgstr "Grupos de cambios"
 
-#: wp-includes/post.php:171 wp-includes/post.php:172 wp-admin/about.php:201
+#: wp-includes/post.php:171 wp-includes/post.php:172 wp-admin/about.php:227
 msgid "Custom CSS"
 msgstr "CSS personalizado"
 

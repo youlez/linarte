@@ -3,8 +3,8 @@ Contributors: awordpresslife
 Donate link: https://paypal.me/awplife
 Tags: slider, slideshow maker, photo slider, image slider, slideshow creator, responsive slider 
 Requires at least: 3.0
-Tested up to: 6.1.1
-Stable tag: 1.3.5
+Tested up to: 6.2.1
+Stable tag: 1.3.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -153,6 +153,10 @@ The following are other recommended plugins by the author:
 11. Slide Show Preview
 
 == Changelog ==
+
+= 1.3.6 =
+* Enhancements: tested for wordpress 6.2.1
+* Bugs: Minor bugs fixed. 
 
 = 1.3.5 =
 * Enhancements: tested for wordpress 6.1.1

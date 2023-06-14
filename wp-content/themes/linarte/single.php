@@ -18,7 +18,7 @@ get_header();
                 <h2 class="mb-3 fw-bold">Descripción</h2>
                 <?php the_content(); ?>
             </div>
-            <a class="reservar-inicio text-decoration-none fs-1" target="_blank" href="https://wa.me/+57<?php echo get_option('telefono_info'); ?>">RESERVA AHORA!</a>
+            <a class="reservar-inicio text-decoration-none fs-1" target="_blank" href="https://wa.me/+57<?php echo get_option('telefono_info'); ?>?text=<?php echo get_option('info_whatsapp'); ?>">RESERVA AHORA!</a>
         <?php
         } else {
             $post_thumbnail_id = get_post_thumbnail_id();

@@ -50,6 +50,7 @@ header a,
 #contactos a{
     text-decoration: none;
     display: block;    
+    font-size: small;
 }
 #inicio,
 #espacios .imagen{
