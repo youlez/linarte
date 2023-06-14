@@ -14,7 +14,7 @@ function cargar_scripts()
     </script>
 <?php
     wp_register_script('bootstrap', get_template_directory_uri() . '/node_modules/bootstrap/dist/js/bootstrap.min.js', array('jquery'), false, false);
-    wp_register_script('linarte-jquery', get_template_directory_uri() . '/js/linarte.js', array('jquery'), "2022.03.18.06", true);
+    wp_register_script('linarte-jquery', get_template_directory_uri() . '/js/linarte.js', array('jquery'), "2022.06.13.01", true);
     wp_register_script('jquery-scrollto', get_template_directory_uri() . '/node_modules/jquery.scrollto/jquery.scrollTo.min.js', array('jquery'), false, false);
     wp_register_script('bootstrap-bundle', get_template_directory_uri() . '/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js', array('jquery'), false, false);
 
@@ -29,7 +29,7 @@ add_action('wp_enqueue_scripts', 'cargar_scripts');
 
 function cargar_estilos()
 {
-    wp_register_style('estilo-principal', get_template_directory_uri() . '/style.css', array(), '2022.03.18.06', 'all');
+    wp_register_style('estilo-principal', get_template_directory_uri() . '/style.css', array(), '2022.06.13.01', 'all');
     wp_register_style('bootstrap', get_template_directory_uri() . '/node_modules/bootstrap/dist/css/bootstrap.css', array(), false, 'all');
     wp_register_style('bootstrap-icons', get_template_directory_uri() . '/node_modules/bootstrap-icons/font/bootstrap-icons.css', array(), false, 'all');
 
