@@ -19,6 +19,7 @@ jQuery(document).ready(function($){
                 $( window ).scrollTo( mover  , {
                     duration: 1000
                 });
+                $("#boton-menu").click();
                 return false;
             }
         }        
@@ -34,7 +35,7 @@ jQuery(document).ready(function($){
     });
     $(".wp3dcarousellightbox-1").click(function(e) {        
         var principal = $(this).closest('li').css("z-index");
-        if(principal==6){
+        if(principal==6||principal==2){
             var nam = $(this).closest('li').find('.wonderplugin3dcarousel-hoveroverlay-title').text();
             switch (nam) {
                 case "ZONA SOCIAL COLOMBIA":                    

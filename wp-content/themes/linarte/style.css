@@ -15,16 +15,18 @@ header a,
     color: black;
 }
 #menu{
-    font-size: x-large;
+    font-size: large;
     font-weight: bold;
 }
 #menu li{
     padding: 8px;
+    text-align: center;
 }
 #menu a{    
     position: relative;
     color: black;
     padding: 2px 8px;
+    display: initial;
 }
 #menu a:hover,
 #menu a.active,
@@ -50,6 +52,7 @@ header a,
 #contactos a{
     text-decoration: none;
     display: block;    
+    word-break: break-all;    
     font-size: small;
 }
 #inicio,
@@ -63,16 +66,18 @@ header a,
 }
 #inicio .contenido{
     position: absolute;
-    bottom: 50px;
-    right: 50px;
-    left: 500px;
+    bottom: 5%;
+    right: 5%;
+    left: 30%;
 }
 #inicio .descripcion{
+    height: 70vh;
+    overflow: auto;
     background-color: #ffffff99;
     border-radius: 5px;
 }
 .link-video{
-    width: 10%;
+    width: 13%;
     background-color: #1f3f5c;
     color: white;
     border-radius: 0px 5px 5px 0px;
@@ -226,4 +231,32 @@ header a,
 }
 .comprar{
     width: fit-content !important;
+}
+@media (max-width: 991px){	  
+    #inicio .contenido {
+        bottom: 5px;
+        right: 5px;
+        left: 5px;
+    }    
+    #inicio .descripcion {
+        height: 70vh;
+        overflow: auto;
+    }
+    #ubicacion, #espacios .contenido, #habitaciones, .entradas, .productos {
+        padding: 50px 0px;
+    }
+    .link-video {
+        width: 20%;        
+        border-radius: 5px;
+    }
+    #espacios .contenido p{
+        font-size: small !important;
+    }
+    .entradas p, .productos p, .modal-body p{
+        font-size: medium !important;
+    }
+    .bounceInRight{    
+        -webkit-animation-name: fadeIn;
+        animation-name: fadeIn;
+    }
 }

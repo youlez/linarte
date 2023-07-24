@@ -4,7 +4,7 @@ $post_name = get_post_field('post_name', get_post());
 get_header();
 ?>
 <div class="entradas mt-4">
-    <div class="col-8 offset-2">
+    <div class="col-lg-8 offset-lg-2 col-10 offset-1">
         <h1 class="titulo text-black text-center"><?php the_title(); ?></h1>
         <?php
         if (get_post_type() == "post") {

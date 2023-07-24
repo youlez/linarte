@@ -15,9 +15,17 @@ if ($query) {
             <div class="descripcion px-4 py-1 text-black fs-5">
                 <p><?php echo $query[0]->post_content; ?></p>
             </div>
+            <a href="#" class="d-inline-block d-lg-none text-decoration-none link-video p-2 mt-2 me-2" data-bs-toggle="modal" data-bs-target="#video">
+                <div class="row m-2">
+                    <div class="col-12 d-flex justify-content-center fs-2">
+                        <i class="bi bi-file-play-fill"></i>
+                    </div>
+                    <div class="col-12 p-0 fs-5 fw-bold text-center"> </div>
+                </div>
+            </a>
             <a class="reservar-inicio text-decoration-none fs-2" target="_blank" href="https://wa.me/+57<?php echo get_option('telefono_info'); ?>?text=<?php echo get_option('info_whatsapp'); ?>">RESERVA AHORA</a>
         </div>
-        <a href="#" class="position-absolute bottom-0 text-decoration-none link-video p-2" data-bs-toggle="modal" data-bs-target="#video">
+        <a href="#" class="d-none d-lg-block position-absolute bottom-0 text-decoration-none link-video p-2" data-bs-toggle="modal" data-bs-target="#video">
             <div class="row m-2">
                 <div class="col-12 d-flex justify-content-center fs-2">
                     <i class="bi bi-file-play-fill"></i>
@@ -30,12 +38,13 @@ if ($query) {
     </section>
 <?php } ?>
 <section id="ubicacion" class="col-12 row animacion fadeIn">
-    <div class="col-8 offset-2 row">
-        <div class="col-8 p-4 cuadro">
+    <div class="col-11 offset-1 col-lg-8 offset-lg-2 row">
+        <h1 class="d-lg-none fs-2 titulo mb-4 text-center mb-2">ENCUENTRANOS</h1>
+        <div class="conl-12 col-lg-8 p-4 cuadro">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d993.6729147004578!2d-74.33005469999999!3d4.990797199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4085cab7183101%3A0xa40b15623c842a9c!2sCra.%203%2C%20La%20Vega%2C%20Cundinamarca!5e0!3m2!1ses!2sco!4v1686703821452!5m2!1ses!2sco" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-        <div class="col-4 animacion bounceInRight delay px-5">
-            <h1 class="fs-2 titulo mb-4">ENCUENTRANOS</h1>
+        <div class="col-12 col-lg-4 animacion bounceInRight delay px-lg-5 pt-2 pt-lg-0">
+            <h1 class="fs-2 titulo mb-4 d-none d-lg-block">ENCUENTRANOS</h1>
             <p><b>Dirección:</b> <?php echo get_option('direccion_info'); ?></p>
             <p><b>Municipio:</b> <?php echo get_option('municipio_info'); ?></p>
             <p>
@@ -50,52 +59,52 @@ if ($query) {
 <section id="espacios" class="animacion fadeIn position-relative">
     <div style="background-image: url(<?php bloginfo('template_url'); ?>/img/piscina.jpg);" class="imagen position-absolute col-12">
     </div>
-    <div class="col-8 offset-2 contenido">
+    <div class="col-12 col-lg-8 offset-lg-2 contenido">
         <h1 class="fs-2 titulo mb-4 text-center text-black">NUESTROS ESPACIOS</h1>
-        <div class="row d-flex justify-content-center align-items-center">
-            <div class="col-3 p-4 pb-0 row d-flex justify-content-center align-items-center animacion fadeIn delay">
+        <div class="row m-0 d-flex justify-content-center align-items-center">
+            <div class="col-6 col-lg-3 p-4 pb-0 row d-flex justify-content-center align-items-center animacion fadeIn delay">
                 <img class="img-fluid col-7" src="<?php bloginfo('template_url'); ?>/img/espacios/habitaciones.png" alt="">
                 <p class="mt-2 text-center fs-5 text-black">
                     4 Habitaciones con cama doble y con baño
                 </p>
             </div>
-            <div class="col-3 p-4 pb-0 row d-flex justify-content-center align-items-center animacion fadeIn" style="-webkit-animation-delay: 0.4s;	-moz-animation-delay: 0.4s;	animation-delay: 0.4s;">
+            <div class="col-6 col-lg-3 p-4 pb-0 row d-flex justify-content-center align-items-center animacion fadeIn" style="-webkit-animation-delay: 0.4s;	-moz-animation-delay: 0.4s;	animation-delay: 0.4s;">
                 <img class="img-fluid col-7" src="<?php bloginfo('template_url'); ?>/img/espacios/sala.png" alt="">
                 <p class="mt-2 text-center fs-5 text-black">
                     Sala con Sofacama
                 </p>
             </div>
-            <div class="col-3 p-4 pb-0 row d-flex justify-content-center align-items-center animacion fadeIn" style="-webkit-animation-delay: 0.5s;	-moz-animation-delay: 0.5s;	animation-delay: 0.5s;">
+            <div class="col-6 col-lg-3 p-4 pb-0 row d-flex justify-content-center align-items-center animacion fadeIn" style="-webkit-animation-delay: 0.5s;	-moz-animation-delay: 0.5s;	animation-delay: 0.5s;">
                 <img class="img-fluid col-7" src="<?php bloginfo('template_url'); ?>/img/espacios/comedor.png" alt="">
                 <p class="mt-2 text-center fs-5 text-black">
                     Comedor
                 </p>
             </div>
-            <div class="col-3 p-4 pb-0 row d-flex justify-content-center align-items-center animacion fadeIn" style="-webkit-animation-delay: 0.6s;	-moz-animation-delay: 0.6s;	animation-delay: 0.6s;">
+            <div class="col-6 col-lg-3 p-4 pb-0 row d-flex justify-content-center align-items-center animacion fadeIn" style="-webkit-animation-delay: 0.6s;	-moz-animation-delay: 0.6s;	animation-delay: 0.6s;">
                 <img class="img-fluid col-7" src="<?php bloginfo('template_url'); ?>/img/espacios/cocina.png" alt="">
                 <p class="mt-2 text-center fs-5 text-black">
                     Cocina
                 </p>
             </div>
-            <div class="col-3 p-4 pb-0 row d-flex justify-content-center align-items-center animacion fadeIn delay">
+            <div class="col-6 col-lg-3 p-4 pb-0 row d-flex justify-content-center align-items-center animacion fadeIn delay">
                 <img class="img-fluid col-7" src="<?php bloginfo('template_url'); ?>/img/espacios/baño.png" alt="">
                 <p class="mt-2 text-center fs-5 text-black">
                     Baño Social
                 </p>
             </div>
-            <div class="col-3 p-4 pb-0 row d-flex justify-content-center align-items-center animacion fadeIn" style="-webkit-animation-delay: 0.4s;	-moz-animation-delay: 0.4s;	animation-delay: 0.4s;">
+            <div class="col-6 col-lg-3 p-4 pb-0 row d-flex justify-content-center align-items-center animacion fadeIn" style="-webkit-animation-delay: 0.4s;	-moz-animation-delay: 0.4s;	animation-delay: 0.4s;">
                 <img class="img-fluid col-7" src="<?php bloginfo('template_url'); ?>/img/espacios/jacuzzi.png" alt="">
                 <p class="mt-2 text-center fs-5 text-black">
                     Jacuzzi
                 </p>
             </div>
-            <div class="col-3 p-4 pb-0 row d-flex justify-content-center align-items-center animacion fadeIn" style="-webkit-animation-delay: 0.5s;	-moz-animation-delay: 0.5s;	animation-delay: 0.5s;">
+            <div class="col-6 col-lg-3 p-4 pb-0 row d-flex justify-content-center align-items-center animacion fadeIn" style="-webkit-animation-delay: 0.5s;	-moz-animation-delay: 0.5s;	animation-delay: 0.5s;">
                 <img class="img-fluid col-7" src="<?php bloginfo('template_url'); ?>/img/espacios/piscina.png" alt="">
                 <p class="mt-2 text-center fs-5 text-black">
                     Acceso a piscina del hotel
                 </p>
             </div>
-            <div class="col-3 p-4 pb-0 row d-flex justify-content-center align-items-center animacion fadeIn" style="-webkit-animation-delay: 0.6s;	-moz-animation-delay: 0.6s;	animation-delay: 0.6s;">
+            <div class="col-6 col-lg-3 p-4 pb-0 row d-flex justify-content-center align-items-center animacion fadeIn" style="-webkit-animation-delay: 0.6s;	-moz-animation-delay: 0.6s;	animation-delay: 0.6s;">
                 <img class="img-fluid col-7" src="<?php bloginfo('template_url'); ?>/img/espacios/quebrada.png" alt="">
                 <p class="mt-2 text-center fs-5 text-black">
                     Acceso a quebrada del hotel
@@ -136,7 +145,7 @@ if ($query->have_posts()) {
                     </div>
                     <div class="modal-body">
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-12 col-lg-6">
                                 <div id="carousel<?php echo get_post_field('post_name', get_post()); ?>" class="carousel slide carousel-fade" data-bs-ride="carousel">
                                     <div class="carousel-indicators">
                                         <button type="button" data-bs-target="#carousel<?php echo get_post_field('post_name', get_post()); ?>" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -160,7 +169,7 @@ if ($query->have_posts()) {
                                     </button>
                                 </div>
                             </div>
-                            <div class="descripcion col-6 position-relative">
+                            <div class="descripcion col-12 col-lg-6 position-relative">
                                 <p><?php echo get_the_excerpt(); ?></p>
                                 <a href="<?php bloginfo('url'); ?>/<?php echo get_post_field('post_name', get_post()); ?>" class="btn-vermas px-3 py-2 text-white fw-bold text-decoration-none position-absolute bottom-0">VER MAS</a>
                             </div>

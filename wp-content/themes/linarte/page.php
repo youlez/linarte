@@ -5,12 +5,12 @@ get_header();
 if ($post_name == "productos") {
 ?>
     <div class="productos mt-4">
-        <div class="col-8 offset-2">
+        <div class="col-lg-8 offset-lg-2 col-10 offset-1">
             <h1 class="titulo text-black text-center"><?php the_title(); ?></h1>
             <div class="animacion fadeIn text-black my-4 fs-5">
                 <?php the_content(); ?>
             </div>
-            <div class="row">
+            <div class="row m-0">
                 <?php
                 $args = array(
                     'post_type' => array('productos'),
@@ -25,7 +25,7 @@ if ($post_name == "productos") {
                         $post_thumbnail_id = get_post_thumbnail_id();
                         $post_thumbnail_url = wp_get_attachment_url($post_thumbnail_id);
                 ?>
-                        <div class="col-4">
+                        <div class="col-12 col-lg-4">
                             <div class="card animacion fadeIn">
                                 <div class="card-header d-flex justify-content-center align-items-center" style="height: 75px;">
                                     <h4 class="text-black text-center"><?php the_title(); ?></h4>
@@ -54,7 +54,7 @@ if ($post_name == "productos") {
                     }
                 } else {
                     ?>
-                    <div class="text-center fs-5 mt-4 row justify-content-center">
+                    <div class="text-center fs-5 mt-4 row m-0 justify-content-center">
                         <div class="cuadro comprar p-3 text-white fw-bold text-decoration-none">
                             AÚN NO HAY PRODUCTOS PARA VENDER, ESPÉRALOS PRONTO
                         </div>
